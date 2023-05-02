@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [10, 20, 30, 20, 50, 60];
+
+        const result = arr.find(item => item > 30);
+        console.log(result);
+
+        const result2 = arr.find(item => item === 20);
+        console.log(result2);
+        
+        const result3 = arr.findIndex(item => item === 20);
+        console.log(result3);
+        console.log(`------------`)
+        
+        const data = [  //Json객체
+            {id: 1, name: '홍길동', age: 25},
+            {id: 2, name: '프로도', age: 20},
+            {id: 3, name: '라이언', age: 30}
+        ];
+
+        //id가 1인 값
+        const data2 = data.find(item => item.id === 1);
+        console.log(data2);
+
+        const data3 = data.find(item => item.name === '어피치');
+        console.log(data3); //값이 없어서 undefined
+
+        const data4 = data.findIndex(item => item.name === '어피치');
+        console.log(data4); //값이 없어서 -1
+
+        
+
+    </script>
+</body>
+</html>
+
+<!--
+find
+filter와 비슷, 결과는 하나의 값(처음 만나는 값을 가져온다)
+-->

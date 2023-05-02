@@ -29,6 +29,7 @@
         ); //이런 식으로 사용 가능
         console.log(`------------------`);
 
+        //처리되는 문장이 하나일때는 {}, return을 생략할 수 있다.
         data.map((item, index) => {
             return (console.log(item.id, item.name, item.age));
         });
