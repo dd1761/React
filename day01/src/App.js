@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Dog from './component/Dog.js';
+import Test1 from './component/Test1.js';
+import Test2 from './component/Test2.js';
+import Test3 from './component/Test3.js';
+import Test4 from './component/Test4.js';
+import Test5 from './component/Test5.js';
 
-function App() {
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>  {/* 최상단에는 반드시 div로 감싸주어야 한다.*/}
+      <Dog />
+      <hr />
+      <Dog />
+      <hr />
+      <Test1 />
+      <hr />
+      <Test2 />
+      <hr />
+      <Test3 />
+      <hr />
+      <Test4 />
+      <hr />
+      <Test5 />
     </div>
   );
-}
+};
 
 export default App;
