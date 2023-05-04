@@ -12,7 +12,23 @@ const Test02 = () => {
     ]
     return (
         <div>
-            
+            <h2>{ title }</h2>
+            <ul style={{border: "1px solid red"}}>
+                {
+                    //반드시 key를 주어야 한다.
+                    arr.map((item, index) => {
+                        return(<li key={index}>{index} : {item}</li>)
+                    })
+                }
+            </ul>
+            <hr />
+            <ul style={{ border: '1px solid blue'}}>
+                {
+                    data.map(item => {
+                        return(<li key={item.id}>{item.id} : {item.name}</li>)
+                    })
+                }
+            </ul>
         </div>
     );
 };
