@@ -5,6 +5,7 @@ import Test03 from './component/Test03.js';
 import Test04 from './component/Test04.js';
 import Test05 from './component/Test05.js';
 import Test06 from './component/Test06.js';
+import Cat from './component/Cat.js';
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       {/* <Test03 /> */}
       {/* <Test04 /> */}
       {/* <Test05 /> */}
-      <Test06 />
+      {/* <Test06 /> */}
+      <Cat />
     </div>
   );
 };

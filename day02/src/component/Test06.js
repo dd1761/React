@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Test06.css'
+import '../css/Test06.css'
 
 const Test06 = () => {
     const [data, setData] = useState([
