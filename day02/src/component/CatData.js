@@ -14,4 +14,4 @@ export default [{
     id: 4,
     img: 'https://cdn.pixabay.com/photo/2015/03/27/13/16/maine-coon-694730_960_720.jpg',
     title: '검은고양'
-}]
+}] 
