@@ -7,11 +7,14 @@ const Test03 = () => {
     const onOpen = () => {
         setIsOpen(true)
     }
+    const onClose = () => {
+        setIsOpen(false)
+    }
     return (
         <div>
             <button className='button' onClick={ onOpen }>팝업창</button>
             {
-                isOpen && <Test03Modal />
+                isOpen && <Test03Modal onClose={ onClose }/>
             }
         </div>
     );

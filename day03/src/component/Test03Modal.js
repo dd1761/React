@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Test03Modal = () => {
+const Test03Modal = ({onClose}) => {
     return (
         <>
             <div className='bg'></div>   
             <div className='popup'>
-                <p className='closex' style={{cursor: 'pointer'}}>X</p>
+                <p onClick={ onClose }className='closex' style={{cursor: 'pointer'}}>X</p>
                 <h2>Have a nice day!!</h2>
             </div>
         </>
