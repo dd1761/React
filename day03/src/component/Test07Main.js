@@ -39,7 +39,7 @@ const Test07Main = () => {
    
 
     return (
-        <div>
+        <div className='wrap'>
             {
                 count === 1 && <Test07Input data={data} onInput={onInput} onNext={ onNext } />
             }

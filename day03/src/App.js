@@ -6,6 +6,7 @@ import Test04 from './component/Test04';
 import Test05 from './component/Test05';
 import Test06 from './component/Test06';
 import Test07Main from './component/Test07Main';
+import Test08Gallery from './component/Test08Gallery';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <Test04 /> */}
       {/* <Test05 /> */}
       {/* <Test06 /> */}
-      <Test07Main />  
+      <Test07Main />
+      {/* <Test08Gallery /> */}
     </div>
   );
 }
