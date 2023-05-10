@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Test01 = () => {
+    const names = '장원영, 아이유, 카리나, 윈터, 안유진, 이승기, 손흥민, 김민재, 유재석, 송중기'.split(','); //split() : 문자열을 배열로 변환
+
+    const [name, setName] = useState('홍길동');
+    const [age, setAge] = useState(25);
+
+    const onName = () => {
+        const index = Math.floor(Math.random() * names.length); 
+        //Math.floor() : 소수점 이하를 버림 
+        //Math.random() * name.length : 0 ~ 10 사이의 랜덤한 숫자
+        setName(names[index]);
+    }
+    
+    const onAge = () => {
+        setAge(age + 1)
+    }
+
+    //거의 사용하지 않는다.
+    // 값이 변하기만 하면 실행이 된다.
+    //불필요한 사용이 너무 많다.
+    // useEffect( () => { 
+    //     console.log('안녕하세요');
+    // })
+
+    useEffect( () => {
+        console.log('안녕하세요');
+    }, [ name ])
+
     return (
         <div>
-            
+            <button onClick={ onName }>이름 변경</button>
+            <button onClick={ onAge }>나이 증가</button>
+            <hr />
+            <h1>{ name }</h1>
+            <h1>{ age }</h1>
         </div>
     );
 };
