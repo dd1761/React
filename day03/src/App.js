@@ -17,8 +17,8 @@ function App() {
       {/* <Test04 /> */}
       {/* <Test05 /> */}
       {/* <Test06 /> */}
-      <Test07Main />
-      {/* <Test08Gallery /> */}
+      {/* <Test07Main /> */}
+      <Test08Gallery />
     </div>
   );
 }

@@ -1,47 +1,47 @@
-.wrap {
+.wrap2 {
     width: 700px; 
     margin: 30px auto; 
     display: flex;
 }
-.wrap .bigview {width: 600px;}
-.wrap .bigview .bigimg {
+.wrap2 .bigview {width: 600px;}
+.wrap2 .bigview .bigimg {
     width: 600px; 
     height: 400px; 
     position: relative; 
     margin-bottom: 20px;
     text-align: center;
 }
-.wrap .bigview .bigimg img { height: 100%; }
-.wrap .bigview .bigimg h2 {
+.wrap2 .bigview .bigimg img { height: 100%; }
+.wrap2 .bigview .bigimg h2 {
     position: absolute; 
     left: 30px; 
     top: 30px; 
     font-size: 30px; 
     color:#fff;
 }
-.wrap .bigview ul, 
+.wrap2 .bigview ul, 
 .wrap .bigview li {
     list-style: none;
     padding-left: 0px;
 }
-.wrap .bigview ul {
+.wrap2 .bigview ul {
     display: flex; 
     flex-wrap: wrap;
 }
-.wrap .bigview ul li {
+.wrap2 .bigview ul li {
     width: 110px; 
     margin-right: 10px; 
     margin-bottom: 10px;
 }
-.wrap .bigview ul li img {width:110px;}
-.wrap .text {
+.wrap2 .bigview ul li img {width:110px;}
+.wrap2 .text {
     width: 400px; 
     background: #efefef; 
     box-sizing: border-box; 
     padding: 30px;
 }
-.wrap .text strong {
+.wrap2 .text strong {
     font-size: 30px; 
     margin-bottom: 40px; 
     display: block;}
-.wrap .text p {font-size: 18px;}
+.wrap2 .text p {font-size: 18px;}

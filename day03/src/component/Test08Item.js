@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Test08Item = () => {
+const Test08Item = ({item, onView}) => {
     return (
-        <div>
-            
-        </div>
+        <li onClick={ () => onView(item.id) }>
+            <img src={ item.img } />
+        </li>
     );
 };
 
