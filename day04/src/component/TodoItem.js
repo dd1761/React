@@ -1,10 +1,14 @@
 import React from 'react';
+import '../css/TodoList.module.css'
 
-const TodoItem = () => {
+const TodoItem = ({ item, onDel }) => {
+    const { seq, text }=  item;
+
     return (
-        <div>
-            
-        </div>
+        <li>
+            { text }
+            <button onClick={ () =>  onDel(seq) }>삭제</button>
+        </li>
     );
 };
 
