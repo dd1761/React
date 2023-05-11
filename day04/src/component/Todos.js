@@ -1,10 +1,19 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from '../css/Todos.module.css';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
 const Todos = () => {
-    const [data, setData] = useState([]);
+    //const [data, setData] = useState([]);
+
+    //로컬 스토리지 읽어오기
+    const [data, setData] = useState(JSON.parse(localStorage.getItem('data')) || [] ); // ||은 or이 아니라 "거짓" 을 확인 즉 거짓이라면 빈 배열을 존재하면 data를
+
+    //로컬 스토리지 저장하기
+    useEffect(() => {   //데이터에 변화가 있을 때마다
+        localStorage.setItem('data', JSON.stringify(data)) //지금 데이터를 JSON타입으로 localStorage에 저장해라
+    }, [data]) 
+
     const seq = useRef(data.length+1);
     
     const onDel = (seq) => {
