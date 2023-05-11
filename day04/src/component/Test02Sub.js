@@ -14,6 +14,7 @@ const Test02Sub = () => {
         console.log('useEffect');
         window.addEventListener('mousemove', onMove);
 
+        //[]로 지정하면 컴포넌트가 사라질 때 cleanup 함수가 호출된다.
         return () => {
             console.log('clean up');
             window.removeEventListener('mousemove', onMove);
