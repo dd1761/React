@@ -5,15 +5,15 @@ const Test03 = () => {
     const [count2, setCount2] = useState(1)
 
     //브라우저에서 count1의 값은 바뀌면서 출력되지만 '짝수' 또는 '홀수'의 결과는 출력되지 않는다.
-    const isEven = () => {
-        return count1 % 2 === 0
-    }
+    // const isEven = () => {
+    //     return count1 % 2 === 0
+    // }
 
     //사용자가 함수를 만들어서 return 할 경우 return ㄱ밧을 기억하기 떄문에 결과가 '짝수' 또는 '홀수' 가 나온다.
     //count1의 값이 변할때만 useMemo()가 실행되고 count2는 값이 바뀌어도 useMemo()를 호출하지 않는다.
-    // const isEven = useMemo(() => {
-    //     return count1 %2  === 0
-    // }, [count1])
+    const isEven = useMemo(() => {
+        return count1 %2  === 0
+    }, [count1])
 
     return (
         <div>
