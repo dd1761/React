@@ -5,14 +5,41 @@ const Test01 = () => {
     const [data, setData] = useState([]);
 
     //1번 방법
-    useEffect(() => { // 페이지를 실행하였을 때 
+    /*useEffect(() => { // 페이지를 실행하였을 때 
         fetch('https://jsonplaceholder.typicode.com/posts') //Spring Boot에서의 ajax안에 url과 똑같은 역할을 한다.
         .then(res => res.json())
         .then(res => setData(res))
 
-    }, []) 
+    }, []) */
 
+    //2번 방법
+    /*useEffect(() => { // 페이지를 실행하였을 때 
+        axios.get('https://jsonplaceholder.typicode.com/posts') //Spring Boot에서의 ajax안에 url과 똑같은 역할을 한다.
+        .then(res => setData(res.data)) //외부 데이터를 res로 받고 res에 존재하는 data를 setData에 넣어준다.
 
+    }, [])*/
+
+    //3번 방법
+    /*useEffect(() => { // 페이지를 실행하였을 때 
+        const getData = async() => {    //비동기 통신 => 요청을 하면 응답이 올 때까지 기다리지 않는다. 다른 일을 먼저 수행
+            const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+            const data = await res.json()
+            setData(data)
+        }
+
+        getData();
+    }, [])*/
+
+    //4번 방법
+    
+    useEffect(() => { // 페이지를 실행하였을 때 
+        const getData = async() => {    //비동기 통신 => 요청을 하면 응답이 올 때까지 기다리지 않는다. 다른 일을 먼저 수행
+            const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+            setData(res.data)
+        }
+
+        getData();
+    }, [])
 
     return (
         <div>
