@@ -27,9 +27,9 @@ const Test01 = () => {
         <div>
             <h1>카운트 : { count }</h1>
             <p>
-                <button onClick={ onIncrement }>증가</button>
-                <button onClick={ onDecrement }>감소</button>
-                <button onClick={ onReset }>초기화</button>
+                <button onClick={ () => dispatch({ type: 'INCREMENT'}) }>증가</button>
+                <button onClick={ () => dispatch ({ type: 'DECREMENT' }) }>감소</button>
+                <button onClick={ () => dispatch({ type: 'RESET' }) }>초기화</button>
             </p>
         </div>
     );
