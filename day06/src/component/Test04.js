@@ -1,5 +1,6 @@
 import React,{useReducer,useEffect} from 'react';
 import axios from 'axios';
+
 const initialState = {
     data:{},
     error:null,
