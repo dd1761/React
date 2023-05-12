@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Test04Sub from './Test04Sub';
 
 const Test04 = () => {
     const [food, setFood] = useState()
@@ -39,6 +40,7 @@ const Test04 = () => {
                 </p>
             </div>
             <hr />
+            <Test04Sub color={ color } food={ food }/>
         </div>
     );
 };
