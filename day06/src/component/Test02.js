@@ -13,7 +13,7 @@ const reducer = (state, action) => {
         case 'PINK':
             return 'pink';
         case 'RESET':
-            return 'reset';
+            return initialState; //'black'라고 사용 가능 
         default:
             return state;
     }
@@ -25,11 +25,11 @@ const Test02 = () => {
         <div>
             <h1 style={{ color: color }}>color : { color }</h1>
             <p>
-                <button>빨강</button>
-                <button>초록</button>
-                <button>파랑</button>
-                <button>분홍</button>
-                <button>초기화</button>
+                <button onClick={ () => dispatch({ type: 'RED'})}>빨강</button>
+                <button onClick={ () => dispatch({ type: 'GREEN'})}>초록</button>
+                <button onClick={ () => dispatch({ type: 'BLUE'})}>파랑</button>
+                <button onClick={ () => dispatch({ type: 'PINK'})}>분홍</button>
+                <button onClick={ () => dispatch({ type: 'RESET'})}>초기화</button>
             </p>
         </div>
     );
