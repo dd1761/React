@@ -1,10 +1,12 @@
 import React from 'react';
 import App01 from './App01';
+import App02 from './App02';
 
 const App = () => {
   return (
     <div>
       <App01 />
+      <App02 />
     </div>
   );
 };
