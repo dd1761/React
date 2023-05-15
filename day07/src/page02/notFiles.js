@@ -1,11 +1,11 @@
 import React from 'react';
 
-const notFiles = () => {
+const NotFiles = () => {
     return (
-        <div>
-            
+        <div className='page'>
+            <h1>NotFiles Page</h1>
         </div>
     );
 };
 
-export default notFiles;
+export default NotFiles;

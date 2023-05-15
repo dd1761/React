@@ -5,7 +5,7 @@ import App02 from './App02';
 const App = () => {
   return (
     <div>
-      <App01 />
+      {/* <App01 /> */}
       <App02 />
     </div>
   );

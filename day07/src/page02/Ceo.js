@@ -2,8 +2,8 @@ import React from 'react';
 
 const Ceo = () => {
     return (
-        <div>
-            
+        <div className='page'>
+            <h1>Ceo Page</h1>
         </div>
     );
 };

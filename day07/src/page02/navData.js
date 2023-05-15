@@ -1,11 +1,6 @@
-import React from 'react';
-
-const navData = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
-
-export default navData;
+export default [
+    { title: 'HOME', path: '/' },
+    { title: 'ABOUT', path: '/about' },
+    { title: 'CEO', path: '/ceo' },
+    { title: 'SUB01', path: '/sub01' }
+]
