@@ -1,0 +1,33 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+
+//------------------------------------------------------
+import { Provider } from 'react-redux';
+import rootReducer from './store';
+// import { createStore } from 'redux'; - deprecated
+import { legacy_createStore as createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension'; // 리덕스 개발자 도구
+
+
+//const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools()); // 리덕스 개발자 도구
+//------------------------------------------------------
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode> 
+    <Provider store={ store }> 
+      <App />     {/* <App/> 아래의 모든 후손까지 store를 써도 된다. */}
+    </Provider>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
