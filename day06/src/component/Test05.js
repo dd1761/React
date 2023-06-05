@@ -6,7 +6,7 @@ const initialState = {
   error: null,
   loading: true,
 };
-
+// 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'SUCCESS':
